@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.have_nerd_font = true
 
 require("vim-options")
-require("lazy").setup("plugins") -- This automatically loads lua/plugins/luasnip.lua
+require("lazy").setup("plugins") 
 require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
 
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50"

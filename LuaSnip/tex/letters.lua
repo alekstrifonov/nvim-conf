@@ -60,8 +60,7 @@ for trigger, command in pairs(greek_letters) do
 		s({
 			trig = ";" .. trigger,
 			snippetType = "autosnippet",
-			condition = tex_utils.in_mathzone, -- This is the magic line
-		}, {
+			condition = tex_utils.in_mathzone, }, {
 			t("\\" .. command),
 		})
 	)
