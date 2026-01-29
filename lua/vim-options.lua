@@ -7,8 +7,13 @@ vim.cmd("set shiftwidth=2")
 vim.g.mapleader= " "
 vim.opt.cursorline = true                          -- Highlight current line
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {desc = "Center cursor after moving down half-page"})
+vim.keymap.set("n", "<C-u>", "<C-u>zz", {desc = "Center cursor after moving up half-page"})
 -- Make keymaps feel instant but still give you time to type leader combos
+vim.cmd("command! W w") -- Map :W to save as well
 vim.o.timeout = true        -- enable timeout for mapped sequences
 vim.o.timeoutlen = 300      -- default is 1000; 300ms feels much faster
 vim.o.ttimeoutlen = 0       -- don't wait for terminal escape codes
+vim.keymap.set("n", "<leader>lc", ":VimtexCompile<CR>")
+vim.keymap.set("n", "<leader>lv", ":VimtexView<CR>")
+vim.keymap.set("n", "<leader>le", ":VimtexErrors<CR>")
 
