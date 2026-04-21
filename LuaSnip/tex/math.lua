@@ -29,7 +29,7 @@ return {
   ),
 
   -- SUBSCRIPT (Triggers on __)
-  s({ trig = "__", dscr = "Subscript", snippetType = "autosnippet", condition = in_mathzone },
+  s({ trig = "__", dscr = "Subscript", wordTrig = false,  snippetType = "autosnippet", condition = in_mathzone },
     fmta([[_{<>}<>]], { i(1), i(0) })
   ),
 
@@ -40,7 +40,7 @@ return {
 
   -- MATHBB (MBB)
   s({ trig = "MBB", dscr = "Mathbb", snippetType = "autosnippet", condition = in_mathzone },
-    fmta([[\mathbb{<>}<>]], { i(1), i(0) })
+    fmta([[\mathbb{<><>]], { i(1), i(0) })
   ),
 
   -- UNDERSET
@@ -57,4 +57,17 @@ return {
   s({ trig = "sq", dscr = "Square Root", snippetType = "autosnippet", condition = in_mathzone },
     fmta([[\sqrt{<>}<>]], { i(1), i(0) })
   ),
+  -- hat
+  s({ trig = "hat", dscr = "Hat", snippetType = "autosnippet", condition = in_mathzone },
+    fmta([[\hat{<>}<>]], { i(1), i(0) })
+  ),
+  -- bar
+  s({ trig = "bar", dscr = "Bar", snippetType = "autosnippet", condition = in_mathzone },
+    fmta([[\bar{<>}<>]], { i(1), i(0) })
+  ),
+s({ trig = "text", dscr = "text", snippetType = "autosnippet", condition = in_mathzone },
+    fmta([[\text{ <> }<>]], { i(1), i(0) })
+  ),
+
+
 }

@@ -12,9 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.have_nerd_font = true
+vim.opt.iskeyword:append("192-255")
 
 require("vim-options")
 require("lazy").setup("plugins") 
 require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
+-- This adds the Cyrillic character range to what Neovim considers a "word"
 
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50"
